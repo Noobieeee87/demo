@@ -15,8 +15,10 @@ public class GreetingController {
     @GetMapping("/hello")
     public Object greeting() {
        // return "HELLO";
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+/*        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String currentPrincipalName = authentication.getName();
-        return currentPrincipalName;
+        return currentPrincipalName;*/
+
+        return CustomPrincipalExtractor.map;
     }
 }
